@@ -24,10 +24,13 @@
 <meta property="og:image:alt" content="DLS Calculator: the revised target when rain cuts a cricket match short">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"DLS Calculator","url":"https://yuvrajkhetan.github.io/dls-calculator/","description":"Work out the revised Duckworth-Lewis-Stern (DLS) target when rain cuts a cricket match short.","applicationCategory":"SportsApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/nunito-latin-900-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/nunito-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+/* Nunito, self-hosted (SIL Open Font License, see fonts/OFL.txt) */
+@font-face{font-family:"Nunito"; font-style:normal; font-weight:700; font-display:swap; src:url(fonts/nunito-latin-700-normal.woff2) format("woff2"); unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Nunito"; font-style:normal; font-weight:800; font-display:swap; src:url(fonts/nunito-latin-800-normal.woff2) format("woff2"); unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Nunito"; font-style:normal; font-weight:900; font-display:swap; src:url(fonts/nunito-latin-900-normal.woff2) format("woff2"); unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 :root{
   --ui: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --round: ui-rounded, "SF Pro Rounded", "Nunito", -apple-system, system-ui, sans-serif;
@@ -125,7 +128,7 @@ button,input{font:inherit;color:inherit}
 }
 
 /* ---------- Header ---------- */
-.top{max-width:1100px; width:calc(100% - 32px); margin:18px auto 0; padding:14px 16px 14px 18px; display:flex; align-items:center; gap:14px; border-radius:26px}
+.top{max-width:1068px; width:calc(100% - 32px); margin:18px auto 0; padding:14px 20px; display:flex; align-items:center; gap:14px; border-radius:26px}
 .ball{flex:none; width:44px; height:44px; border-radius:50%; position:relative; transform:rotate(-24deg);
   background:radial-gradient(circle at 32% 26%, #ff7a6b 0, #c32520 38%, #6b0d0c 100%);
   box-shadow:inset 0 -4px 7px rgba(0,0,0,.45), inset 0 2px 3px rgba(255,255,255,.3), 0 4px 10px rgba(0,0,0,.35)}
@@ -278,7 +281,7 @@ details.how[open] summary::after{transform:rotate(-135deg) translateY(-2px)}
 @media (min-width:920px){.dock{display:none}}
 
 @media (max-width:540px){
-  .top{padding:12px 12px 12px 14px; gap:10px; border-radius:22px}
+  .top{padding:12px 16px; gap:10px; border-radius:22px}
   .titles h1{font-size:1.05rem}
   .titles p{display:none}
   .ball{width:38px; height:38px}
@@ -290,11 +293,11 @@ details.how[open] summary::after{transform:rotate(-135deg) translateY(-2px)}
   .brk .seg{width:100%}
 }
 @media (max-width:420px){
-  .top{gap:8px; padding-left:16px}
+  .top{gap:8px}
   .ball{display:none}
 }
 @media (max-width:350px){
-  .top{gap:6px; padding:10px 10px 10px 14px}
+  .top{gap:6px; padding:10px 12px 10px 16px}
   .titles h1{font-size:.98rem}
   .pill{padding:7px 9px; font-size:.8rem}
 }
