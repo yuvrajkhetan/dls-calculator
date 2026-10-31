@@ -294,12 +294,17 @@ details.how[open] summary::after{transform:rotate(-135deg) translateY(-2px)}
 }
 @media (max-width:420px){
   .top{gap:8px}
-  .ball{display:none}
+  .ball{width:32px; height:32px}
+  .titles h1{font-size:min(1.05rem, 4.2vw)}
+  .pill{padding:7px 11px; font-size:.82rem}
+}
+@media (max-width:400px){
+  .pill{padding:6px 9px; font-size:.8rem}
 }
 @media (max-width:350px){
   .top{gap:6px; padding:10px 12px 10px 16px}
-  .titles h1{font-size:.98rem}
-  .pill{padding:7px 9px; font-size:.8rem}
+  .ball{width:26px; height:26px}
+  .pill{padding:6px 8px; font-size:.76rem}
 }
 @media (prefers-reduced-motion: reduce){
   .tile.flip{animation:none}
